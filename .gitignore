@@ -4,5 +4,4 @@ build/
 *.egg-info/
 dist
 venv
-pyapollo.egg-info
 
