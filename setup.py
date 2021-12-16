@@ -19,7 +19,7 @@ setup(
     ],
     url='https://github.com/foxliu/pyapollo.git',
     author=pyapollo.__author__,
-    author_email='liusonghui@bestpay.com.cn',
+    author_email='foxliu2012@gmail.com',
     classifiers=[
         'Programming Language :: Python :: 3.7',
     ],
