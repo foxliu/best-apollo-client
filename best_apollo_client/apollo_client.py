@@ -10,6 +10,27 @@ import yaml
 import requests
 
 
+class GlobalVar:
+    """Global Vars"""
+    name = 'best_apollo_client'
+
+    def set(self, name, value):
+        setattr(self, name, value)
+
+    def get(self, name, default_value=None):
+        return getattr(self, name, default_value)
+
+
+ApolloData = GlobalVar()
+
+
+def init_config(apollo_data: dict):
+    """初始化配置信息"""
+    logging.getLogger(__name__).debug(f'get apollo data: {apollo_data}')
+    for k, v in apollo_data.items():
+        ApolloData.set(k, v)
+
+
 class ApolloClient(object):
     """Get config from Apollo"""
 
@@ -33,7 +54,7 @@ class ApolloClient(object):
         self.stopped = False
         self.ip = None
         self.init_ip(ip)
-        self.callback_funcs = []
+        self.callback_funcs = [init_config]
 
         self._stopping = False
         self._cache = {}
