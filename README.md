@@ -10,7 +10,7 @@ Installation
 ------------
 
 ``` shell
-pip install best-apollo-client
+pip install bp-apollo-client
 ```
 
 # Usage

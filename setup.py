@@ -13,7 +13,7 @@ Installation
 - 启动客户端长连接监听
 
 ``` python
-from best_apollo_client.apollo_client import ApolloClient, ApolloData
+from bp_apollo_client.apollo_client import ApolloClient, ApolloData
 client = ApolloClient(app_id=<appId>, cluster=<clusterName>, config_server_url=<configServerUrl>)
 client.client.add_callback_funcs(<cb_funs>)  # add callback fun for get apollo push config when changed
 client.start()
@@ -29,16 +29,16 @@ client.start()
   ```
 """
 from setuptools import setup, find_packages
-import best_apollo_client
+import bp_apollo_client
 
-SHORT = u'best-apollo-client'
+SHORT = u'bp-apollo-client'
 
 setup(
-    name='best-apollo-client',
-    version=best_apollo_client.__version__,
+    name='bp-apollo-client',
+    version=bp_apollo_client.__version__,
     packages=find_packages(),
     url='https://github.com/foxliu/pyapollo.git',
-    author=best_apollo_client.__author__,
+    author=bp_apollo_client.__author__,
     author_email='foxliu2012@gmail.com',
     classifiers=[
         'Programming Language :: Python :: 3.7',
