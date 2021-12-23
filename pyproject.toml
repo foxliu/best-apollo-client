@@ -3,6 +3,6 @@ requires = [
     "setuptools>=42",
     "wheel",
     "requests",
-    "pyyaml",
+    "PyYaml",
 ]
 build-backend = "setuptools.build_meta"
